@@ -52,6 +52,63 @@ public class week5_task {
         int area = length * width;
         System.out.println("Area of the rectangle is: " + area);
     }
+    // 7. Calculates the factorial of a given number using the Java method.
+    void factorial(int a){
+        int fact = 1;
+        for (int i = 1; i <= a; i++) {
+            fact *= i;
+        }
+        System.out.println("Factorial of " + a + " is: " + fact);
+    }
+    // 8. Calculate the nth Fibonacci number using the method.
+    void fibo(int a){
+        int i;
+        int first=0;
+        int second=1;
+        int next;
+        System.out.print("Fibonacci Series: " + first + ", " + second);
+        for (i = 2; i < a; i++) {
+            next = first + second;
+            System.out.print(", " + next);
+            first = second;
+            second = next;
+        }
+    }
+    // 9. Write a Java program to find the Greatest Common Divisor (GCD) of two numbers.
+    void gcd (int a, int b) {
+        int i;
+        int s = 0;
+        for (i=1; i<=a && i<=b; i++){
+            if (a%i==0 && b%i==0){
+                s=i;
+            }
+        }
+        System.out.println("The GCD of " + a + " and " + b + " is: " + s);
+    }
+    // 10. Write a Java program to display all prime numbers less than a given number and count all the prime numbers less than that number using functions. 
+    void prime_less_then_(int a){
+        int i;
+        int count=0;
+        for (i=2; i<a; i++){
+            for(int j=1; j<i;j++){
+                if (i%j==0){
+                    count++;
+                    if (count>2){
+                        count=0;
+                    }
+                    System.out.println("count "+count);
+                    System.out.println("i "+i);
+                }
+            }
+            if (count<=2){
+                // System.out.println(i + " is a prime number.");
+            }
+        }
+    }
+
+
+
+
 
 
     public static void main(String[] args) {
@@ -62,6 +119,9 @@ public class week5_task {
         // System.out.println("The product is: " + obj.multiply3(2, 3, 4));
         // obj.simpleInterest(1000, 5, 2);   
         // obj.areaOfRectangle();
-        
+        // obj.factorial(5);
+        // obj.fibo(5);
+        // obj.gcd(12, 18);
+        obj.prime_less_then_(10);
     }
 }
