@@ -7,7 +7,7 @@ public class Dog {
         System.out.println(name+ " can bark");
     }
     void wag(){
-        System.out.println(name+ " can wag its tail");
+        System.out.println(name+ " wag its tail");
     }
     void printDetail(){
         System.out.println("Name: "+name+"\nAge: "+age+"\nColor: "+color);
